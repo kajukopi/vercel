@@ -34,6 +34,7 @@ app.use("/", require("./router/index"));
 app.use("/api", require("./router/api"));
 app.use("/signout", require("./router/signout"));
 app.use("/pernikahan", require("./router/pernikahan"));
+app.use("/preview_pernikahan", require("./router/preview_pernikahan"));
 
 app.listen(port, () => {
   console.log(`Server running at port ${port}`);

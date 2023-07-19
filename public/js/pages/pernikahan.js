@@ -11,10 +11,9 @@ form.addEventListener("submit", (e) => {
   siduru
     .post("upload/" + form.dataset.subId, formData)
     .then((content) => {
-      const data = Object.fromEntries(formData);
       console.log(content);
-      console.log(data);
-      // siduru.post("pernikahan", formData);
+      form.reset();
+      Storage.remove("data-pernikahan");
     })
     .catch((error) => {
       console.log(error);

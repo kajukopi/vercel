@@ -14,4 +14,5 @@ router.get("/", permission, (req, res) => {
   res.render("pernikahan", { title: "Form Pernikahan", users, script: "pernikahan" });
 });
 
+
 module.exports = router;

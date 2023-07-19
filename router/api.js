@@ -1,11 +1,13 @@
 const express = require("express");
 const router = express.Router();
+const db = require("../db");
 
 const { OAuth2Client } = require("google-auth-library");
 const client = new OAuth2Client();
 
 const fs = require("fs");
 const axios = require("axios");
+const sharp = require("sharp");
 
 const multer = require("multer");
 const storage = multer.diskStorage({
@@ -43,17 +45,48 @@ const uploadFile = upload.fields([
   { name: "galeri", maxCount: 8 },
 ]);
 
-router.post("/upload/:id", uploadFile, (req, res) => {
+router.post("/upload/:id", uploadFile, async (req, res) => {
   const file = {
     id: req.params.id,
-    wanita: "img/upload/tmp/" + req.files["filewanita"][0].filename,
-    pria: "img/upload/tmp/" + req.files["filepria"][0].filename,
+    wanita: "img/upload/" + req.files["filewanita"][0].filename,
+    pria: "img/upload/" + req.files["filepria"][0].filename,
     galeri: [],
   };
-  req.files["galeri"].forEach((item) => {
-    file.galeri.push("img/upload/tmp/" + item.filename);
+  req.files["galeri"].forEach(async (item) => {
+    const galeri = await sharp(item.path)
+      .resize(800)
+      .toFile("public/img/upload/" + item.filename);
+    fs.unlink("public/img/upload/tmp/" + item.filename, (error) => {
+      if (error) {
+        console.error("Error deleting file:", error);
+      } else {
+        console.log("File deleted successfully");
+      }
+    });
+    file.galeri.push("img/upload/" + item.filename);
   });
-  console.log(Object.assign(req.body, file));
+  const wanita = await sharp(req.files["filewanita"][0].path)
+    .resize(800)
+    .toFile("public/img/upload/" + req.files["filewanita"][0].filename);
+  fs.unlink("public/img/upload/tmp/" + req.files["filewanita"][0].filename, (error) => {
+    if (error) {
+      console.error("Error deleting file:", error);
+    } else {
+      console.log("File deleted successfully");
+    }
+  });
+  const pria = await sharp(req.files["filepria"][0].path)
+    .resize(800)
+    .toFile("public/img/upload/" + req.files["filepria"][0].filename);
+  fs.unlink("public/img/upload/tmp/" + req.files["filepria"][0].filename, (error) => {
+    if (error) {
+      console.error("Error deleting file:", error);
+    } else {
+      console.log("File deleted successfully");
+    }
+  });
+  // console.log(Object.assign(req.body, file));
+  db.ref("pernikahan").post(Object.assign(req.body, file));
   res.json({ status: true, content: file });
 });
 

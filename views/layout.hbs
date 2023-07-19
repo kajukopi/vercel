@@ -5,34 +5,34 @@
   <!-- COMMON TAGS -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Form Undangan Digital</title>
+  <title>Undangan Digital - {{title}}</title>
   <!-- Search Engine -->
-  <meta name="description" content="Form Undangan Digital by Karim Roy Tampubolon">
+  <meta name="description" content="Undangan Digital by Karim Roy Tampubolon">
   <meta name="image" content="/android-chrome-512x512.png">
   <!-- Schema.org for Google -->
-  <meta itemprop="name" content="Form Undangan Digital">
-  <meta itemprop="description" content="Form Undangan Digital by Karim Roy Tampubolon">
+  <meta itemprop="name" content="Undangan Digital">
+  <meta itemprop="description" content="Undangan Digital by Karim Roy Tampubolon">
   <meta itemprop="image" content="/android-chrome-512x512.png">
   <!-- Open Graph general (Facebook, Pinterest & LinkedIn) -->
-  <meta property="og:title" content="Form Undangan Digital">
-  <meta property="og:description" content="Form Undangan Digital by Karim Roy Tampubolon">
+  <meta property="og:title" content="Undangan Digital">
+  <meta property="og:description" content="Undangan Digital by Karim Roy Tampubolon">
   <meta property="og:image" content="/android-chrome-512x512.png">
   <meta property="og:url" content="https://undangan-digital.xyz/">
-  <meta property="og:site_name" content="Form Undangan Digital">
+  <meta property="og:site_name" content="Undangan Digital">
   <meta property="og:locale" content="en_US">
   <meta property="og:type" content="website">
   <!-- Twitter -->
   <meta property="twitter:card" content="summary">
-  <meta property="twitter:title" content="Form Undangan Digital">
-  <meta property="twitter:description" content="Form Undangan Digital by Karim Roy Tampubolon">
+  <meta property="twitter:title" content="Undangan Digital">
+  <meta property="twitter:description" content="Undangan Digital by Karim Roy Tampubolon">
   <meta property="twitter:image:src" content="/android-chrome-512x512.png">
   <!-- Favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="stylesheet" href="css/all.css">
-  <link rel="stylesheet" href="css/core.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
+  <link rel="manifest" href="../../site.webmanifest">
+  <link rel="stylesheet" href="../../css/all.css">
+  <link rel="stylesheet" href="../../css/core.css">
   <script src="https://accounts.google.com/gsi/client" async defer></script>
   <style>
     @media (min-width: 1000px) {
@@ -52,7 +52,7 @@
     <!-- Sidenav -->
     <nav id="sidenav" class="sidenav" data-mdb-hidden="false" data-mdb-accordion="true">
       <a class="ripple d-flex justify-content-center py-4" href="#!" data-mdb-ripple-color="primary">
-        <img id="MDB-logo" src="favicon-32x32.png" alt="MDB Logo" draggable="false" />
+        <img id="MDB-logo" src="../../favicon-32x32.png" alt="MDB Logo" draggable="false" />
       </a>
 
       <ul class="sidenav-menu">
@@ -61,30 +61,30 @@
             <i class="fa-solid fa-home fa-fw me-3"></i><span>Home</span></a>
         </li>
         <li class="sidenav-item">
-          <a class="sidenav-link"><i class="fa-solid fa-table fa-fw me-3"></i><span>Form</span></a>
+          <a class="sidenav-link"><i class="fa-solid fa-user-group fa-fw me-3"></i><span>Pernikahan</span></a>
           <ul class="sidenav-collapse">
             <li class="sidenav-item">
-              <a href="/pernikahan" class="sidenav-link">Pernikahan</a>
+              <a href="/pernikahan" class="sidenav-link">Data</a>
             </li>
             <li class="sidenav-item">
-              <a class="sidenav-link">Khitanan</a>
+              <a href="/preview_pernikahan/{{users.sub}}" class="sidenav-link">Preview</a>
             </li>
             <li class="sidenav-item">
-              <a class="sidenav-link">Ulang Tahun</a>
-            </li>
-            <li class="sidenav-item">
-              <a class="sidenav-link">Lain - lain</a>
+              <a class="sidenav-link">Tamu Undangan</a>
             </li>
           </ul>
         </li>
         <li class="sidenav-item">
-          <a class="sidenav-link"><i class="fa-solid fa-users fa-fw me-3"></i><span>Tamu Undangan</span></a>
+          <a class="sidenav-link"><i class="fa-solid fa-users fa-fw me-3"></i><span>Ulang Tahun</span></a>
           <ul class="sidenav-collapse">
             <li class="sidenav-item">
-              <a class="sidenav-link">List</a>
+              <a href="/ulangtahun/" class="sidenav-link">Data</a>
             </li>
             <li class="sidenav-item">
-              <a class="sidenav-link">Log</a>
+              <a href="/preview_ulangtahun/{{users.sub}}" class="sidenav-link">Preview</a>
+            </li>
+            <li class="sidenav-item">
+              <a class="sidenav-link">Tamu Undangan</a>
             </li>
           </ul>
         </li>
@@ -101,13 +101,6 @@
           class="btn shadow-0 p-0 me-3 d-block d-lg-none" aria-controls="#sidenav" aria-haspopup="true">
           <i class="fas fa-bars fa-lg"></i>
         </button>
-
-        <!-- Search form -->
-        <form class="d-none d-md-flex input-group w-auto my-auto">
-          <input autocomplete="off" type="search" class="form-control rounded"
-            placeholder='Search (ctrl + "/" to focus)' style="min-width: 225px" />
-          <span class="input-group-text border-0"><i class="fas fa-search"></i></span>
-        </form>
 
         <!-- Right links -->
         <ul class="navbar-nav ms-auto d-flex flex-row">
@@ -139,8 +132,8 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center" href="#"
               id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-              <img src="img/users/{{users.name}}.jpg" class="rounded-circle" height="22" alt="{{users.email}}"
-                loading="lazy"  />
+              <img src="../../img/users/{{users.name}}.jpg" class="rounded-circle" height="22" alt="{{users.email}}"
+                loading="lazy" />
             </a>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
               <li><a class="dropdown-item" href="#">My profile</a></li>
@@ -184,12 +177,12 @@
 
 </body>
 
-<script src="js/core.js" type="text/javascript"></script>
-<script src="js/module.js" type="text/javascript"></script>
-<script src="js/main.js" type="text/javascript"></script>
+<script src="../../js/core.js" type="text/javascript"></script>
+<script src="../../js/module.js" type="text/javascript"></script>
+<script src="../../js/main.js" type="text/javascript"></script>
 
 {{#if script}}
-<script src="js/pages/{{script}}.js" type="text/javascript"></script>
+<script src="../../js/pages/{{script}}.js" type="text/javascript"></script>
 {{/if}}
 
 </html>
