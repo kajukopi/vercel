@@ -1,0 +1,22 @@
+[
+  {
+    "_id": "0yCeA8xwzMcy54T_Gwu2hHL4PP_c96vZ",
+    "session": {
+      "cookie": {
+        "originalMaxAge": null,
+        "expires": null,
+        "httpOnly": true,
+        "path": "/"
+      },
+      "users": {
+        "sub": "105688868301749352317",
+        "name": "Klinik Buruh",
+        "given_name": "Klinik",
+        "family_name": "Buruh",
+        "picture": "https://lh3.googleusercontent.com/a/AAcHTteNFPzuExKCAKZ3zaW_5qSuC1XjjNUN2VJBN_wXwnlu=s96-c",
+        "email": "klinikburuh@gmail.com"
+      }
+    },
+    "expires": 1689845652275
+  }
+]

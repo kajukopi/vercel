@@ -1,0 +1,256 @@
+<div class="card">
+  <div class="card-header">
+
+  </div>
+  <div class="card-body">
+    <!-- Form wizrd -->
+    <div>
+      <!-- Steps -->
+      <ul class="stepper" id="stepper-form" data-mdb-stepper-linear="true">
+        <form id="form-pernikahan" class="needs-validation stepper-form" data-sub-id="{{users.sub}}">
+          <!-- First step -->
+          <li class="stepper-step stepper-active">
+            <div class="stepper-head">
+              <span class="stepper-head-icon">1</span>
+              {{!-- <span class="stepper-head-text">Mempelai Wanita</span> --}}
+            </div>
+            <div class="stepper-content py-3">
+              <h3 class="mb-4">Data Mempelai Wanita</h3>
+              <div class="form-outline mb-4">
+                <input type="text" id="nama_wanita" name="namaWanita" class="form-control" required />
+                <label class="form-label" for="nama_wanita">Nama Lengkap Mempelai Wanita</label>
+                <div class="invalid-feedback"><small>Harus di isi.</small></div>
+              </div>
+
+              <div class="mb-4">
+                <p class="" for="file-wanita">
+                  Foto Wanita, ukuran foto yang diharapkan adalah 1:1 atau kotak, yang berarti tinggi dan lebar fotonya
+                  sama atau
+                  sebanding. Dengan demikian, foto akan tampak proporsional dan tidak terdistorsi.
+                </p>
+                <input type="file" class="form-control" id="file-wanita" accept=".jpg, .jpeg" required />
+                <div class="invalid-feedback"><small>Harus di isi.</small></div>
+              </div>
+
+              <p class="mb-4">
+                Nama orangtua harus jelas, dan jika salah satu atau keduanya sudah meninggal, harus dicantumkan dengan
+                lengkap dan menggunakan gelar Almarhum (Alm.) atau Almarhumah (Almh.) sebelum nama yang bersangkutan.
+              </p>
+
+              <div class="form-outline mb-4">
+                <input type="text" id="orangtua_wanita_bapak" name="orangTuaBapakWanita" class="form-control"
+                  required />
+                <label class="form-label" for="orangtua_wanita_bapak">Nama Lengkap Orangtua
+                  <small>(Bapak)</small></label>
+                <div class="invalid-feedback"><small>Harus di isi.</small></div>
+              </div>
+
+              <div class="form-outline mb-4">
+                <input type="text" id="orangtua_wanita_ibu" name="orangTuaIbuWanita" class="form-control" required />
+                <label class="form-label" for="orangtua_wanita_ibu">Nama Lengkap Orangtua
+                  <small>(Ibu)</small></label>
+                <div class="invalid-feedback"><small>Harus di isi.</small></div>
+              </div>
+
+            </div>
+          </li>
+          <!-- First step -->
+
+          <!-- Second step -->
+          <li class="stepper-step">
+            <div class="stepper-head">
+              <span class="stepper-head-icon">2</span>
+              {{!-- <span class="stepper-head-text">Mempelai Pria</span> --}}
+            </div>
+            <div class="stepper-content py-3">
+              <h3 class="mb-4">Data Mempelai Pria</h3>
+              <div class="form-outline mb-4">
+                <input type="text" id="nama_pria" name="namaPria" class="form-control" required />
+                <label class="form-label" for="nama_pria">Nama Lengkap Mempelai Pria</label>
+                <div class="invalid-feedback"><small>Harus di isi.</small></div>
+              </div>
+
+              <div class="mb-4">
+                <p class="" for="file-pria">
+                  Foto Pria, ukuran foto yang diharapkan adalah 1:1 atau kotak, yang berarti tinggi dan lebar fotonya
+                  sama atau
+                  sebanding. Dengan demikian, foto akan tampak proporsional dan tidak terdistorsi.
+                </p>
+                <input type="file" class="form-control" id="file-pria" required accept=".jpg, .jpeg" />
+                <div class="invalid-feedback"><small>Harus di isi.</small></div>
+              </div>
+
+              <p class="mb-4">
+                Nama orangtua harus jelas, dan jika salah satu atau keduanya sudah meninggal, harus dicantumkan dengan
+                lengkap dan menggunakan gelar Almarhum (Alm.) atau Almarhumah (Almh.) sebelum nama yang bersangkutan.
+              </p>
+
+              <div class="form-outline mb-4">
+                <input type="text" id="orangtua_pria_bapak" name="orangTuaBapakPria" class="form-control" required />
+                <label class="form-label" for="orangtua_pria_bapak">Nama Lengkap Orangtua
+                  <small>(Bapak)</small></label>
+                <div class="invalid-feedback"><small>Harus di isi.</small></div>
+              </div>
+
+              <div class="form-outline mb-4">
+                <input type="text" id="orangtua_pria_ibu" name="orangTuaIbuPria" class="form-control" required />
+                <label class="form-label" for="orangtua_pria_ibu">Nama Lengkap Orangtua
+                  <small>(Ibu)</small></label>
+                <div class="invalid-feedback"><small>Harus di isi.</small></div>
+              </div>
+            </div>
+          </li>
+          <!-- Second step -->
+
+          <!-- Third step -->
+          <li class="stepper-step">
+            <div class="stepper-head">
+              <span class="stepper-head-icon">3</span>
+              {{!-- <span class="stepper-head-text">Resepsi & Akad</span> --}}
+            </div>
+            <div class="stepper-content py-3">
+              <h3 class="mb-4">Data Akad dan Resepsi</h3>
+              <p>
+                Jika resepsi dan akad dilaksanakan pada alamat yang sama, Anda hanya perlu mengisi waktu dan tanggal
+                akad serta resepsi tanpa perlu mencantumkan alamat kembali.
+              </p>
+              <div class="form-outline mb-4">
+                <input type="text" id="url_google" name="googleMap" class="form-control" required />
+                <label class="form-label" for="url_google">Link URL Google Map</label>
+                <div class="invalid-feedback"><small>Harus di isi.</small></div>
+              </div>
+              <div class="form-outline mb-4">
+                <textarea name="alamatAkad" class="form-control" id="alamat_akad" rows="4" required></textarea>
+                <label class="form-label" for="alamat_akad">Alamat lengkap Akad</label>
+                <div class="invalid-feedback"><small>Harus di isi.</small></div>
+              </div>
+              <div class="form-outline mb-4">
+                <input type="date" id="tanggal_akad" name="tanggalAkad" class="form-control" required />
+                <label class="form-label" for="tanggal_akad">Tanggal Akad</label>
+                <div class="invalid-feedback"><small>Harus di isi.</small></div>
+              </div>
+              <div class="form-outline mb-4">
+                <input type="time" id="pukul_akad" name="pukulAkad" class="form-control" required />
+                <label class="form-label" for="pukul_akad">Pukul Akad </label>
+                <div class="invalid-feedback"><small>Harus di isi.</small></div>
+              </div>
+              <hr class="mb-4">
+              <div class="form-outline mb-4">
+                <textarea name="alamatResepsi" class="form-control" id="alamat_resepsi" rows="4"></textarea>
+                <label class="form-label" for="alamat_resepsi">Alamat lengkap Resepsi</label>
+                <div class="invalid-feedback"><small>Harus di isi.</small></div>
+              </div>
+              <div class="form-outline mb-4">
+                <input type="date" id="tanggal_resepsi" name="tanggalResepsi" class="form-control" required />
+                <label class="form-label" for="tanggal_resepsi">Tanggal Resepsi</label>
+                <div class="invalid-feedback"><small>Harus di isi.</small></div>
+              </div>
+              <div class="form-outline mb-4">
+                <input type="time" id="pukul_akad" name="pukulResepsi" class="form-control" required />
+                <label class="form-label" for="pukul_akad">Pukul Resepsi </label>
+                <div class="invalid-feedback"><small>Harus di isi.</small></div>
+              </div>
+            </div>
+          </li>
+          <!-- Third step -->
+
+          <!-- Fourth step -->
+          <li class="stepper-step">
+            <div class="stepper-head">
+              <span class="stepper-head-icon">4</span>
+              {{!-- <span class="stepper-head-text">Lainnya</span> --}}
+            </div>
+            <div class="stepper-content py-3">
+              <h3 class="mb-4">Foto Galeri</h3>
+              <div class="mb-4">
+                <label class="form-label" for="galeri">Foto Galeri</label>
+                <input type="file" class="form-control" id="galeri" name="galeri" required multiple
+                  accept=".jpg, .jepg" />
+              </div>
+              <hr class="mb-4">
+              <h3 class="mb-4">Angpau Digital</h3>
+              <div class="row g-3">
+                <div class="col">
+                  <!-- Default radio -->
+                  <div class="form-check mb-4">
+                    <input class="form-check-input" type="radio" value="BCA" name="bank" required id="bankBca" />
+                    <label class="form-check-label" for="bankBca">Bank BCA</label>
+                  </div>
+                </div>
+                <div class="col">
+                  <!-- Default radio -->
+                  <div class="form-check mb-4">
+                    <input class="form-check-input" type="radio" value="Mandiri" name="bank" required
+                      id="bankMandiri" />
+                    <label class="form-check-label" for="bankMandiri">Bank Mandiri</label>
+                  </div>
+                </div>
+                <div class="col">
+                  <!-- Default radio -->
+                  <div class="form-check mb-4">
+                    <input class="form-check-input" type="radio" value="BNI" name="bank" required id="bankBNI" />
+                    <label class="form-check-label" for="bankBNI">Bank BNI</label>
+                  </div>
+                </div>
+                <div class="col">
+                  <!-- Default radio -->
+                  <div class="form-check mb-4">
+                    <input class="form-check-input" type="radio" value="BRI" name="bank" required id="bankBRI" />
+                    <label class="form-check-label" for="bankBRI">Bank BRI</label>
+                  </div>
+                </div>
+                <div class="col">
+                  <!-- Default radio -->
+                  <div class="form-check mb-4">
+                    <input class="form-check-input" type="radio" value="Permata" name="bank" required
+                      id="bankPermata" />
+                    <label class="form-check-label" for="bankPermata">Bank Permata</label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-outline mb-4">
+                <input type="text" id="nama-rekening" name="namaRekening" class="form-control" required />
+                <label class="form-label" for="nama-rekening">Nama Rekening</label>
+                <div class="invalid-feedback"><small>Harus di isi.</small></div>
+              </div>
+              <div class="form-outline mb-4">
+                <input type="number" id="nomor-rekening" name="nomorRekening" class="form-control" required />
+                <label class="form-label" for="nomor-rekening">Nomor Rekening</label>
+                <div class="invalid-feedback"><small>Harus di isi.</small></div>
+              </div>
+
+            </div>
+          </li>
+          <!-- Fourth step -->
+
+          <!-- Fifth step -->
+          <li class="stepper-step">
+            <div class="stepper-head">
+              <span class="stepper-head-icon">4</span>
+              {{!-- <span class="stepper-head-text">Lainnya</span> --}}
+            </div>
+            <div class="stepper-content py-3">
+              <h3 class="mb-4">Selesai</h3>
+              <p>
+                Pastikan data yang Anda masukkan sudah benar. Jika ada perubahan, Anda dapat mengedit data yang memang
+                perlu diubah. Pada H-5 sebelum acara, sistem akan mengunci data agar tidak dapat berubah.
+              </p>
+              <button class="btn btn-success btn-block" type="submit">Simpan</button>
+            </div>
+          </li>
+          <!-- Fifth step -->
+
+        </form>
+      </ul>
+      <!-- Steps -->
+
+      <!-- Buttons -->
+      <div class="d-flex justify-content-center px-3">
+        <button id="form-prev-step" class="btn btn-primary w-100 me-2">Previous step</button>
+        <button id="form-next-step" class="btn btn-primary w-100">Next step</button>
+      </div>
+      <!-- Buttons -->
+    </div>
+    <!-- Form wizrd -->
+  </div>
+</div>
